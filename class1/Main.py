@@ -79,4 +79,19 @@ print("Reassigned x:", x)
 x = 3.14
 print("Reassigned x again:", x)
 
+#Order of Operations
 
+result = 2 + 3 * 4 ** 2 / 8
+print(result) # 8.0
+
+#Reassignment
+count = 10
+print(count) # 10
+count = 20
+print(count)    # 20
+
+score = 100
+score += 10
+print(score) # 110
+score -= 5
+print(score) # 105
