@@ -4,13 +4,13 @@
   - A variable is a name that refers to a value stored in memory.
   - Python allows you to assign values to variables dynamically.
 
-## 2.1.1.1 Expressions in Python
+##  Expressions in Python
   - An expression is a combination of values, variables, operators, and function calls that Python evaluates to produce another value.  
 
-## 2.1.1.1.Statements in Python
+##  Statements in Python
   - A statement is an instruction that Python executes. Statements do not necessarily return a value.
 
-## 2.1.1.2. Differentiate between data types and apply type conversions. 
+##  Differentiate between data types and apply type conversions. 
    - Integer (int)	x = 10	
    - Float (float)	y = 3.14	
    - String (str)	name = "Alice"	
