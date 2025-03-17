@@ -51,6 +51,14 @@
 ##  Data Types
   - Python is dynamically typed, meaning that variables do not have a fixed type. Instead, the type of a variable is determined at runtime based on the assigned value.
 
+# Function Calls
+- In Python, functions are first-class objects, meaning they can be assigned to variables and passed as arguments.
+- Type Conversion Functions
+- Python provides built-in functions like int(), float(), and str() to handle type conversions.
+- Python defines type conversion functions to directly convert one data type to another.
+- Implicit Type Conversion -- The Python interpreter automatically converts one data type to another without any  user improvement.
+- Explicit Type Conversion -- The data type is manually changed by the user as per their requirement.
+
 #  Variables
   - Python manages memory dynamically using reference counting and garbage collection. When a variable is created, Python
   - Allocates memory for the object.
