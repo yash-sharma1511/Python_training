@@ -36,5 +36,8 @@
    - print("Product:", result)
    - The print() function displays the final product of the numbers in the list.
    - Product: 120
-
-# Advanced Challenge: Debug a Multi-threaded Program
+# Silent Failures
+  - The code does not raise an error because the try-except block catches the exception and handles it using the pass statement. 
+  - Normally, dividing by zero (10 / 0) would raise a ZeroDivisionError, but since the except block is present without specifying 
+  - an exception type, it catches all exceptions silently. The pass statement means "do nothing," so the program continues execution 
+  - without interruption. As a result, the print("No error detected!") statement runs normally, even though an error occurred inside the try block.

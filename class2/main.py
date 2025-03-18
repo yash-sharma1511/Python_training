@@ -52,3 +52,52 @@ def calculate_discount(price, discount):
 
 print(calculate_discount(100, '10%'))  # Output: 90.0
 print(calculate_discount(200, 'abc'))  # Output: Invalid discount format
+
+# Advanced Challenge: Debug a Multi-threaded Program
+import threading
+
+counter = 0
+lock = threading.Lock()  # Create a lock
+
+def increment():
+    global counter
+    for _ in range(100000):
+        with lock:  # Ensures only one thread modifies `counter` at a time
+            counter += 1
+
+threads = [threading.Thread(target=increment) for _ in range(2)]
+
+for t in threads:
+    t.start()
+for t in threads:
+    t.join()
+
+print("Counter:", counter)  # Expected Output: 200000
+
+# Activity: Debug with Breakpoints
+def divide(a, b):
+    result = a / b if b>0 else "error"
+    return result
+
+a = 10
+b = 0
+print(divide(a, b))
+
+# Memory Leaks and Performance Debugging
+import time
+
+def optimized_function():
+    for i in range(100000):
+        yield i * 2  # Generator to avoid storing large lists in memory
+
+# Efficiently iterating through the generator
+count = sum(1 for _ in optimized_function())  # Count elements without storing them
+print(count)
+
+# Unexpected None
+def add(a, b):
+    result = a + b
+    return result  #  Explicitly return the result
+
+print(add(3, 4))  # Output: 7
+
