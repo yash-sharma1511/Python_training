@@ -156,7 +156,7 @@ import my_module
 print("Import is done!")
 print(my_module.my_function())  
 
-
+# Investigate Python’s Import Caching
 # mymodule.py
 print("Module mymodule is being imported!")
 
