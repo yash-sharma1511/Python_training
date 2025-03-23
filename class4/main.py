@@ -153,3 +153,25 @@ print(ans)
 names = ["Alice Wonderland", "Bob Builder", "Charlie Chaplin"]
 ans = [name.split()[0][0] + name.split()[1] for name in names]
 print(ans)
+
+# Chat Log Analyzer
+# **Task**: Count messages per user from chat logs.
+chat_logs = [
+    "Alice: Hi!",
+    "Bob: Hello!",
+    "Alice: How are you?",
+    "Bob: I’m good, thanks!"
+]
+msg={}
+for log in chat_logs:
+    user=log.split(":")[0]
+    msg[user]=msg.get(user,0)+1
+for user,msg in msg.items():
+    print(f"{user}:{msg} messages")
+
+# Data Compressor
+# **Task**: Compress recurring substrings.
+data = "abababababab"
+pattern='ab'
+count=data.count(pattern)
+print(f"'{pattern}' repeated: {count} times")
