@@ -18,13 +18,11 @@ for i in range(1,11):
         print(f"{i*j:4}",end=" ")
     print()
 
-# # Image Processing:
-# from PIL import Image
-# import PIL.ImageOps  
-# img = Image.open(r"C:\Users\Yash Sharma\Desktop\img.jpeg")
-# img = Image.open("./img.jpg")
+# Image Processing:
+from PIL import Image
+import PIL.ImageOps  
+img = Image.open("./img.jpg")
 
-# inverted_img =  PIL.ImageOps.invert(img)
-# inverted_img.save("inverted_image.jpg")
-# print(img.size)
+inverted_img =  PIL.ImageOps.invert(img)
+inverted_img.save("inverted_image.jpg")
 
