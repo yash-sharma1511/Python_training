@@ -17,37 +17,18 @@ class Employee:
     def display_employee_all(self):
         for emp_id,employee in self.Employee_dict.items():
             print(f"emp_id:{employee['Emp_id']},name:{employee['name']},age:{employee['age']}")    
-
-    def get_employee_id(self,name):
-        for emp_id,employee in self.Employee_dict.items():
-            employee['name']==name
-            return employee['Emp_id']
+    
+    def get_employee_id(self, name):
+        for employee in self.Employee_dict.values():
+            if employee['name'] == name:
+                return employee['Emp_id']
+        print("Employee not found")
+        return None
     
     def delete_employee(self,emp_id):
         del self.Employee_dict[emp_id]
         print("Employee deleted successfully")
 
-    def view_attendance(self,emp_id):
-        employee_found=False
-        for employee in self.Employee_dict.values():
-            if employee['Emp_id']==emp_id:
-                last_7_days=[]
-                today=datetime.today().date()
-
-                for record in employee.get('attendance',[]):
-                     record_date = datetime.strptime(record['date'], "%Y-%m-%d").date()
-                     if today-timedelta(days=7)<=record_date<=today:
-                         last_7_days.append(record)
-                if last_7_days:
-                    print(f"Last Seven days attendance of {employee['name']}:{last_7_days}")
-                else:
-                    print(f"No attendance record found for {employee['name']}")
-
-                return last_7_days 
-
-        if not employee_found:
-            print("Employee not found")
-            return None
 
     def mark_attendance(self, emp_id):
         for employee in self.Employee_dict.values():
@@ -78,6 +59,41 @@ class Employee:
                 return
     
         print("Employee not found.")
+
+    def view_attendance(self, emp_id):
+        employee = self.Employee_dict.get(emp_id)
+        print(employee)
+    
+        # if not employee:
+        #     print("Employee not found")
+        #     return None
+    
+        # today = datetime.today().date()
+        # last_7_days = []
+    
+        # attendance_records = employee.get('attendance', [])
+    
+        # if not attendance_records:
+        #     print(f"No attendance records found for {employee['name']}")
+        #     return []
+    
+        # for record in attendance_records:
+        #     try:
+        #         record_date = datetime.strptime(record['date'], "%Y-%m-%d").date()
+        #         if today - timedelta(days=7) <= record_date <= today:
+        #             last_7_days.append(record)
+        #     except Exception as e:
+        #         print(f"Error parsing date: {record['date']} – {e}")
+    
+        # if last_7_days:
+        #     print(f"\nLast 7 days attendance of {employee['name']}:")
+        #     for entry in last_7_days:
+        #         print(f"{entry['date']} — {entry['attendance']}")
+        # else:
+        #     print(f"No attendance found for the last 7 days for {employee['name']}")
+    
+        # return last_7_days
+
     
     def generate_report(self, emp_id):
         employee_found = False
