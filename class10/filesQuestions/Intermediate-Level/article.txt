@@ -1,0 +1,7 @@
+PYTHON is a versatile programming language. 
+
+Many developers use PYTHON for web development, data analysis, and automation.
+
+One of the reasons PYTHON is popular is because of its simplicity and readability. 
+
+PYTHON also has a large community, which makes finding solutions easier.

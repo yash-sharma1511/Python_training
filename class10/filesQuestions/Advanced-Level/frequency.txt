@@ -1,0 +1,14 @@
+a: 3
+and: 1
+brave: 1
+bright: 1
+had: 1
+knight: 2
+once: 1
+shone: 1
+sword: 2
+the: 2
+there: 1
+time: 1
+upon: 1
+was: 1
