@@ -1,0 +1,4 @@
+Hello, this is a line with tabs.
+This line has leading spaces and tabs
+Another line with some tabs.
+Last line with tabs and spaces
